@@ -161,10 +161,14 @@
 
     <!-- Application Form -->
     <div class="container px-4 mt-5">
-      <h2 class="text-center">Submit Your Application</h2>
+      <h1 class="text-center">Apply - {{job.title}}</h1>
+      <div class="text-center mb-5">
+        {{job.location}} • {{job.salary}} <br>
+        Posted on {{job.posted}}
+      </div>
 
       <form
-        action="https://formbold.com/s/3wvKl"
+        action="/jobs/{{job.id}}/apply"
         method="POST"
         enctype="multipart/form-data"
         class="col-lg-8 offset-lg-2"
@@ -226,7 +230,7 @@
         </div>
 
         <!-- Position -->
-        <div class="mb-3 col-sm-6">
+        <!-- <div class="mb-3 col-sm-6">
           <label for="position" class="form-label">Position Applied for</label>
           <select
             class="form-select"
@@ -239,10 +243,10 @@
             <option value="data scientist">Data Scientist</option>
             <option value="ml engineer">ML Engineer</option>
           </select>
-        </div>
+        </div> -->
 
         <!-- Resume -->
-        <div class="mb-3 col-sm-6">
+        <!-- <div class="mb-3 col-sm-6">
           <label for="resume" class="form-label">Upload Resume</label>
           <input
             type="file"
@@ -251,7 +255,7 @@
             name="resume"
             required
           />
-        </div>
+        </div> -->
 
         <!-- Cover Letter -->
         <div class="mb-3">
