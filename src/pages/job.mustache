@@ -161,14 +161,14 @@
 
     <!-- Application Form -->
     <div class="container px-4 mt-5">
-      <h1 class="text-center">Apply - {{job.title}}</h1>
+      <h1 class="text-center">Apply - {{ job.title }}</h1>
       <div class="text-center mb-5">
-        {{job.location}} • {{job.salary}} <br>
-        Posted on {{job.posted}}
+        {{ job.location }} • {{ job.salary }} <br />
+        Posted on {{ job.posted }}
       </div>
 
       <form
-        action="/jobs/{{job.id}}/apply"
+        action="/jobs/{{ job.id }}/apply"
         method="POST"
         enctype="multipart/form-data"
         class="col-lg-8 offset-lg-2"
@@ -304,7 +304,7 @@
           </li>
         </ul>
         <p class="text-center text-body-secondary">
-          © 2023 Jovian (SwiftAce Inc.)
+          © 2024 Robin Mathew
         </p>
       </footer>
     </div>
